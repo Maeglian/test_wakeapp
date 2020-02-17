@@ -1,0 +1,20 @@
+/* Цвета */
+/* Текст */
+/* Брейкпоинты */
+.author {
+  display: flex;
+  align-items: center;
+}
+.author__photo {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  border: 1px solid #898B8C;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.author__name {
+  font-size: 14px;
+  font-weight: 600;
+}

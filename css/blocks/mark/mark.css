@@ -1,0 +1,23 @@
+/* Цвета */
+/* Текст */
+/* Брейкпоинты */
+.mark {
+  display: inline-block;
+  padding: 3px 7px 4px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 0.9;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px 4px 0px 4px;
+}
+.mark--choice {
+  background-color: #3E99ED;
+}
+@media (min-width: 768px) {
+  .mark {
+    padding: 3px 10px 4px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
