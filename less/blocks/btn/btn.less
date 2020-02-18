@@ -3,7 +3,7 @@
 .btn {
   display: inline-block;
   width: calc(100% - 40px);
-  padding: 15px 30px;
+  padding: 15px 10px;
   font-family: "Impact LT Std", sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -23,12 +23,16 @@
 
   &--step {
     position: relative;
-    margin-bottom: 110px;
+    margin-bottom: 70px;
     color: @color-text;
     background: linear-gradient(to right, transparent 50%, rgba(255, 255, 255, 0.5));
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media (min-width: @screen-tablet) {
+      margin-bottom: 110px;
     }
   }
 
@@ -46,12 +50,19 @@
   &--step::after {
     content: "";
     position: absolute;
-    width: 46px;
-    height: 46px;
-    bottom: -75px;
+    bottom: -53px;
     left: 50%;
+    width: 35px;
+    height: 35px;
     background: url(../../../images/arrow.png);
+    background-size: 100% 100%;
     transform: translateX(-50%);
+
+    @media (min-width: @screen-tablet) {
+      bottom: -75px;
+      width: 46px;
+      height: 46px;
+    }
   }
 
   &--step:last-child::after {

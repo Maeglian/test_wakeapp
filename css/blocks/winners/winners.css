@@ -1,0 +1,14 @@
+/* Цвета */
+/* Текст */
+/* Брейкпоинты */
+.winners {
+  position: relative;
+  text-align: center;
+}
+@media (min-width: 720px) {
+  .winners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

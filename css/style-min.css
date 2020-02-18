@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Impact LT Std";
+  src: url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.eot");
+  src: url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.eot?#iefix") format("embedded-opentype"),url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.woff2") format("woff2"),url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.woff") format("woff"),url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.ttf") format("truetype"),url("//db.onlinewebfonts.com/t/6330ddc0d8e61db73c521dbe6288743b.svg#Impact LT Std") format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berlin Sans FB Demi";
+  src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot");
+  src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot?#iefix") format("embedded-opentype"),url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff2") format("woff2"),url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff") format("woff"),url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.ttf") format("truetype"),url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.svg#Berlin Sans FB Demi") format("svg");
+  font-display: swap;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -29,7 +43,7 @@ img {
 .btn {
   display: inline-block;
   width: calc(100% - 40px);
-  padding: 15px 30px;
+  padding: 15px 10px;
   font-family: "Impact LT Std",sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -52,7 +66,7 @@ img {
 
 .btn--step {
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 70px;
   color: #fff;
   background: -webkit-gradient(linear,left top,right top,color-stop(50%,transparent),to(rgba(255,255,255,.5)));
   background: linear-gradient(to right,transparent 50%,rgba(255,255,255,.5));
@@ -60,6 +74,12 @@ img {
 
 .btn--step:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width:720px) {
+  .btn--step {
+    margin-bottom: 110px;
+  }
 }
 
 .btn--step::before {
@@ -76,13 +96,22 @@ img {
 .btn--step::after {
   content: "";
   position: absolute;
-  width: 46px;
-  height: 46px;
-  bottom: -75px;
+  bottom: -53px;
   left: 50%;
+  width: 35px;
+  height: 35px;
   background: url("../images/arrow.png");
+  background-size: 100% 100%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+@media (min-width:720px) {
+  .btn--step::after {
+    bottom: -75px;
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .btn--step:last-child::after {
@@ -120,6 +149,7 @@ img {
   background: -webkit-gradient(linear,left top,left bottom,color-stop(30%,#fff600),to(#ff9000));
   background: linear-gradient(to bottom,#fff600 30%,#ff9000);
 }
+
 .content {
   position: relative;
   z-index: -2;
@@ -156,18 +186,6 @@ img {
   margin-bottom: 25px;
   z-index: 1;
 }
-
-.prize {
-  display: none;
-}
-
-@media (min-width:720px) {
-  .prize {
-    position: absolute;
-    top: -90px;
-    display: block;
-  }
-}
 .logo {
   width: 50%;
   margin-right: auto;
@@ -184,6 +202,17 @@ img {
     transform: translateX(-50%);
   }
 }
+.prize {
+  display: none;
+}
+
+@media (min-width:720px) {
+  .prize {
+    position: absolute;
+    top: -90px;
+    display: block;
+  }
+}
 .title {
   position: relative;
   z-index: 1;
@@ -194,15 +223,28 @@ img {
   text-transform: uppercase;
   color: #fff;
 }
-.winner {
+.winners {
   position: relative;
-  z-index: 1;
+  text-align: center;
 }
 
 @media (min-width:720px) {
-  .winner {
-    width: 50%;
+  .winners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
+}
+.winner {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 50%;
 }
 
 .winner--first {
@@ -250,21 +292,4 @@ img {
 .winner--third img {
   -webkit-box-shadow: inset 0 0 40px 30px rgba(0,0,255,.3),0 0 20px 5px rgba(0,0,255,.3);
   box-shadow: inset 0 0 40px 30px rgba(0,0,255,.3),0 0 20px 5px rgba(0,0,255,.3);
-}
-.winners {
-  position: relative;
-  text-align: center;
-}
-
-@media (min-width:720px) {
-  .winners {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
 }

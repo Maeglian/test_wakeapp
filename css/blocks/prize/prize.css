@@ -1,0 +1,13 @@
+/* Цвета */
+/* Текст */
+/* Брейкпоинты */
+.prize {
+  display: none;
+}
+@media (min-width: 720px) {
+  .prize {
+    position: absolute;
+    top: -90px;
+    display: block;
+  }
+}
