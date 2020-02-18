@@ -1,0 +1,51 @@
+@import "../../variables";
+
+.winner {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: @screen-tablet) {
+    width: 50%;
+  }
+
+
+  &--first {
+    margin-bottom: 70px;
+
+    @media (min-width: @screen-tablet) {
+      padding-top: 20px;
+      padding-right: 60px;
+    }
+
+    img {
+      transform: rotate(-14deg);
+      box-shadow: inset 0 0 40px 30px @color-glow, 0 0 50px 30px @color-glow;
+    }
+  }
+
+  &--second {
+    margin-bottom: 30px;
+
+    @media (min-width: @screen-tablet) {
+      padding-top: 30px;
+      padding-left: 40px;
+    }
+
+    img {
+      transform: rotate(12deg);
+      box-shadow: inset 0 0 40px 30px @color-glow, 0 0 20px 10px @color-glow;
+    }
+
+  }
+
+  &--third {
+    @media (min-width: @screen-tablet) {
+      margin-top: -65px;
+    }
+
+    img {
+      box-shadow: inset 0 0 40px 30px @color-glow, 0 0 20px 5px @color-glow;
+    }
+  }
+}
+

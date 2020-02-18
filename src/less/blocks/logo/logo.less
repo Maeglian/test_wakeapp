@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.logo {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 30%;
+    transform: translateX(-50%);
+  }
+}
